@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CallSafe Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0;
+    background: #f7f8fa;
+    color: #1c1c1e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  h1 { font-size: 1.7rem; margin-bottom: 4px; }
+  h2 { font-size: 1.2rem; margin-top: 2.2em; border-bottom: 1px solid #d8dadf; padding-bottom: 6px; }
+  .effective-date { color: #5f6368; margin-top: 0; margin-bottom: 2em; }
+  table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 0.95rem; }
+  th, td { text-align: left; padding: 8px 10px; border: 1px solid #d8dadf; vertical-align: top; }
+  th { background: #eef1f6; }
+  code { background: #eef1f6; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  a { color: #1565c0; }
+  .callout {
+    background: #fff4e5;
+    border: 1px solid #f0c36d;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 1.2em 0;
+  }
+  hr { border: none; border-top: 1px solid #d8dadf; margin: 2.5em 0; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121214; color: #e7e7ea; }
+    h2 { border-bottom-color: #3a3a3d; }
+    .effective-date { color: #a0a0a6; }
+    th, td { border-color: #3a3a3d; }
+    th { background: #1f1f22; }
+    code { background: #1f1f22; }
+    a { color: #7fb2ff; }
+    .callout { background: #2a2210; border-color: #6b5410; }
+    hr { border-top-color: #3a3a3d; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>CallSafe Privacy Policy</h1>
+  <p class="effective-date"><strong>Effective date:</strong> September 15, 2026</p>
+
+  <p>CallSafe ("we", "our", "the app") is a mobile application that helps you block spam calls, scam calls, and manage a personal blocklist and contacts on Android. This Privacy Policy explains what data CallSafe collects, how it is used, who it may be shared with, and the choices you have. It applies to the Android version of CallSafe (package name <code>com.callsafe.callsafe</code>) and any other platform we may release in the future.</p>
+  <p>If you do not agree with this policy, please do not use the app.</p>
+
+  <h2>1. Summary</h2>
+  <ul>
+    <li>CallSafe screens and blocks calls <strong>entirely on your device</strong> using a local database — we do not see or receive the content or audio of your calls.</li>
+    <li>We do <strong>not</strong> collect your name, email address, precise (GPS) location, SMS content, photos, financial information, or health information.</li>
+    <li>We collect a small amount of data <strong>only</strong> when you choose to submit a community spam/scam report, and separately, standard advertising data through Google AdMob to show ads.</li>
+    <li>You are not required to create an account. Reports are linked only to an anonymous, randomly generated device ID — never to your identity.</li>
+  </ul>
+
+  <h2>2. Data We Collect and Why</h2>
+
+  <h3>2.1 Call &amp; Contacts Data — processed locally, not uploaded to us</h3>
+  <table>
+    <tr><th>Data</th><th>Why we access it</th><th>Where it's stored</th></tr>
+    <tr>
+      <td>Incoming phone numbers (via Android's Call Screening system)</td>
+      <td>To check the number against your blocklist and community risk data <strong>on your device</strong> and decide whether to silently block it or warn you.</td>
+      <td>Never leaves your device.</td>
+    </tr>
+    <tr>
+      <td>Call log (blocked/rejected calls)</td>
+      <td>To show your "Blocked" history tab inside the app.</td>
+      <td>Local database on your device (SQLite).</td>
+    </tr>
+    <tr>
+      <td>Device contacts (only if you tap "Sync from device")</td>
+      <td>To let you mark contacts as trusted so they're never mistakenly blocked.</td>
+      <td>Copied into CallSafe's own local contact list on your device; your system contacts list is only read, never modified.</td>
+    </tr>
+  </table>
+
+  <h3>2.2 Data You Submit — Community Spam/Scam Reports</h3>
+  <p>When you choose to report a number as spam or scam (Report tab, or "Report to community" button), we send the following to our backend (Google Firebase / Cloud Firestore):</p>
+  <ul>
+    <li>The reported phone number (normalized)</li>
+    <li>The report type/category you selected (e.g. Scam, Spam)</li>
+    <li>An optional free-text description you type in</li>
+    <li>The country automatically detected from the phone number's own country code (e.g. "VN") — you do not enter this yourself</li>
+    <li>An anonymous, randomly generated ID tied to your device (via Firebase Anonymous Authentication) — this is <strong>not</strong> your name, email, phone number, or any other identity</li>
+  </ul>
+  <div class="callout">
+    <strong>This data is not private.</strong> To let every CallSafe user benefit from up-to-date community protection, submitted reports (phone number, type, description, and anonymous reporter ID) are readable by all users of the app, and cannot currently be self-service edited or deleted once submitted. Please do not include your own or anyone else's personal information (name, address, etc.) in the free-text description field.
+  </div>
+
+  <h3>2.3 Advertising</h3>
+  <p>CallSafe shows ads (a banner, and an optional rewarded video ad you can choose to watch to manually refresh protection data) through <strong>Google AdMob</strong>. AdMob may collect and process device identifiers (such as the Android Advertising ID), general usage/interaction data, and IP address to serve and measure ads, and — on iOS — will request App Tracking Transparency permission before showing personalized ads. This data is collected and processed by Google, not by us directly. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+  <p>You can opt out of personalized advertising at any time via your device settings (Android: Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization).</p>
+
+  <h3>2.4 Device / Network Country Code</h3>
+  <p>To automatically apply the correct country calling code when you add or block a number (instead of assuming one country for everyone), CallSafe reads your SIM card's country (via <code>TelephonyManager.simCountryIso</code> — no special permission required) or, if unavailable, your device's language/region setting. This value is used only for this local calculation and is never transmitted anywhere.</p>
+
+  <h3>2.5 What We Do NOT Collect</h3>
+  <p>We do not collect: your name, email address, physical/precise (GPS) location, SMS message content, photos or files, financial or payment information, health information, or any government ID. CallSafe does not currently read, filter, or have access to your SMS messages.</p>
+
+  <h2>3. Local Storage</h2>
+  <p>Most of CallSafe's data — your blocklist, call history cache, in-app contacts, and community risk data you've synced — is stored <strong>locally on your device</strong> in a private SQLite database, not accessible by other apps and not uploaded to our servers. Uninstalling the app or clearing its app data permanently deletes this local data.</p>
+
+  <h2>4. Third-Party Services</h2>
+  <p>CallSafe uses the following third-party services, each governed by its own privacy policy:</p>
+  <ul>
+    <li><strong>Google Firebase</strong> (Cloud Firestore, Authentication) — stores community reports and issues anonymous device IDs. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></li>
+    <li><strong>Google AdMob</strong> (Google Mobile Ads SDK) — serves ads. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+  </ul>
+  <p>We do not sell your data to third parties.</p>
+
+  <h2>5. Data Retention &amp; Deletion</h2>
+  <ul>
+    <li>Local data (blocklist, in-app contacts, cache) stays on your device until you delete it in-app or uninstall CallSafe.</li>
+    <li>Community reports you submit are retained indefinitely to keep community protection data accurate, and cannot currently be deleted through the app itself. If you would like a report you submitted removed, contact us at the email below with the phone number and approximate date/time of the report, and we will make a reasonable effort to remove it.</li>
+  </ul>
+
+  <h2>6. Children's Privacy</h2>
+  <p>CallSafe is not directed at children under 13 (or the relevant age of digital consent in your country), and we do not knowingly collect data from children. If you believe a child has provided us data, contact us and we will delete it.</p>
+
+  <h2>7. Security</h2>
+  <p>We rely on industry-standard practices — including Google Firebase's built-in security rules, which restrict clients to creating only their own reports and reading aggregate community data, never editing or deleting others' data — to protect data in transit and at rest. However, no method of transmission or storage is 100% secure.</p>
+
+  <h2>8. International Data Transfers</h2>
+  <p>Data sent to Firebase may be processed and stored on Google Cloud infrastructure located outside your country, including in the United States.</p>
+
+  <h2>9. Your Choices</h2>
+  <ul>
+    <li>You can deny, or later revoke, the Contacts/Call Log permissions in your device's app settings at any time; CallSafe's local blocking features will simply have less data to work with.</li>
+    <li>You can delete any number from your blocklist or in-app contacts at any time from within the app.</li>
+    <li>You can opt out of ad personalization via your device's ad settings.</li>
+  </ul>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Material changes will be reflected by an updated "Effective date" above. Continued use of the app after changes means you accept the revised policy.</p>
+
+  <h2>11. Contact Us</h2>
+  <p>If you have questions about this Privacy Policy, or wish to request deletion of a report you submitted, contact us at:</p>
+  <p><strong>[YOUR-SUPPORT-EMAIL@example.com]</strong></p>
+
+  <hr>
+
+  <h2>Appendix — Android Permissions Reference</h2>
+  <table>
+    <tr><th>Permission</th><th>Purpose</th></tr>
+    <tr><td><code>READ_CONTACTS</code></td><td>Read-only, to let you sync device contacts into your in-app trusted contacts list.</td></tr>
+    <tr><td><code>READ_CALL_LOG</code></td><td>Read-only, to show blocked/rejected calls in the "Blocked" tab.</td></tr>
+    <tr><td><code>WRITE_CALL_LOG</code></td><td>Required by the call-log library for all its calls (including read-only ones); not used to write or export data.</td></tr>
+    <tr><td><code>READ_PHONE_STATE</code></td><td>Required by the call-log library; also used to read the SIM's country code for default calling-code detection (see §2.4). No call/audio content is read.</td></tr>
+    <tr><td><code>READ_PHONE_NUMBERS</code></td><td>Required by the call-log library; not actively used by CallSafe.</td></tr>
+    <tr><td><code>USE_FULL_SCREEN_INTENT</code></td><td>Lets a spam/scam warning open full-screen immediately when your phone is locked and a risky number calls. No data collection involved.</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Shows call-screening result notifications (e.g. "Number blocked", "Warning: possible scam"). No data collection involved.</td></tr>
+    <tr><td><code>SYSTEM_ALERT_WINDOW</code></td><td>Special permission you must grant manually in Settings; lets the spam/scam warning appear on top of other apps when your screen is unlocked. No data collection involved.</td></tr>
+    <tr><td>Advertising ID (via Google AdMob SDK)</td><td>Used by Google to serve and measure ads — see §2.3.</td></tr>
+  </table>
+</main>
+</body>
+</html>
